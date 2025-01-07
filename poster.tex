@@ -1,0 +1,320 @@
+%% Unimelb unofficial Capstone/Unimelb Poster Template
+%% By Changyuan (David) Ni
+%
+% This work is modified from https://cn.overleaf.com/latex/templates/unofficial-template-for-hong-kong-university-of-science-and-technology/bkxykbtssfpb
+
+% Required Compiler: LuaLaTeX
+%[draft]
+\documentclass{beamer}
+%\usepackage{extsizes}
+% ====================
+% Packages
+% ====================
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[size=custom,width=118.9,height=84.1,scale=1.2]{beamerposter} % default
+%\usepackage[orientation=landscape,size=a0,scale=1.4]{beamerposter} % custom
+% scale: scaling factor of all font
+
+\usetheme{gemini}
+\usecolortheme{Tuebingen} % Customize in beamercolorthemeTuebingen.sty
+ 
+\usepackage{wrapfig2}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{lipsum}
+\usepackage{duckuments}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{anyfontsize}
+\usepackage[RGB]{xcolor}
+%\usepackage{floatrow}
+%\usepackage{enumitem}
+\definecolor{dred}{RGB}{209, 51, 59}
+
+
+%\sethlcolor{lightorange}
+
+
+
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.3\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+% ====================
+% Title
+% ====================
+%
+\title{Project Title \\ \normalsize Booth x, Project Code: a-bc-12-defg-345}
+
+\author{Changyuan (David) Ni \inst{1}, Supervised by:\and A/prof John doe \inst{1} \and Dr. Jane Doe \inst{1}}
+
+\institute[shortinst]{\inst{1} Department of Biomedical Engineering, University of Melbourne}
+
+% ====================
+% Footer (optional)
+% ====================
+
+\footercontent{
+  
+  Endeavour 2024, University of Melbourne \hfill
+  \href{mailto:youremail}{xxxxx@student.unimelb.edu.au}}
+% (can be left out to remove footer)
+
+% ====================
+% Logo (optional)
+% ====================
+
+% use this to include logos on the left and/or right side of the header:
+%\logoright{\includegraphics[height=4cm]{UST_MBA_Logo_White.png}}
+%\logoleft{\includegraphics[height=7cm]{logo2.pdf}}
+
+% ====================
+% Body
+% ====================
+
+\begin{document}
+
+\begin{frame}[t]
+\begin{columns}[t]
+\separatorcolumn
+
+  
+\begin{column}{\colwidth}
+    
+  \begin{block}{Background}
+    \textcolor{dred}{\textbf{Some Topic}}\\
+    \lipsum[1][1-3]
+    \setlength{\columnsep}{1.5cm} % Adjust column separation
+    \begin{wrapfigure}[10]{r}[10pt]{0.52\textwidth}  
+        %\setlength{\columnsep}{10em}
+        
+        %\setlength{\wrapoverhang}{-1em} % Add negative space to the left
+        \hfill
+        
+        \includegraphics[width=0.45\textwidth]{example-image-duck}
+        \caption{Duck (figure adapted from duck et al., 2025)}
+        \label{fig:your-label}
+    \end{wrapfigure}
+    %\vspace{-2em}
+   
+    
+
+    \colorbox[RGB]{255, 245,242}{%
+        \begin{minipage}{\linewidth}
+        A highlight box here
+        \begin{itemize}
+            \item \textbf Some important statistics as dot points here
+            \item \textbf Another important statistics that underpins your background
+        \end{itemize}
+        \end{minipage}}
+
+
+        
+    
+    \lipsum[1][1-4]
+    % \colorbox[RGB]{255, 245,242}{%
+    %     \begin{minipage}{\linewidth}
+        
+    %     \end{minipage}}\\
+    %\vspace{1em} % Adjust the space as needed
+    
+    \textcolor{dred}{\textbf{Topic 2}}\\
+    \lipsum[1][1-3] 
+    \begin{itemize}
+        \item \textbf{dot point a:} \lipsum[1][1]
+        \item \textbf{dot point b:} \lipsum[1][1]
+        \item \textbf{dot point c:} \lipsum[1][1]    
+    \end{itemize}
+    
+
+    \end{block}
+
+    \begin{block}{Introduction and Aim}
+        \setlength{\columnsep}{0.3cm} % Adjust column separation
+        \begin{wrapfigure}[18]{l}{0.66\textwidth}  
+        %\setlength{\columnsep}{10em}
+        
+            %\setlength{\wrapoverhang}{3em} % Add negative space to the left
+            %\centering
+            \includegraphics[width=0.66\textwidth]{example-image-duck}
+            \caption{\lipsum[1][1-12]}
+            \label{fig:your-label}
+        \end{wrapfigure}
+    \textcolor{dred}{\textbf{Motivation}}
+    
+    \lipsum[1][1-2]
+    \begin{itemize}
+        \small
+        \setlength{\leftmargini}{-5em}
+        \item point a
+        \item point b 
+    \end{itemize}
+    \normalsize
+    \textcolor{dred}{\textbf{Aim}}
+    \colorbox[RGB]{255, 245,242}{%
+        \begin{minipage}{350pt}
+            \begin{itemize}
+                \item \lipsum[1][1-2]
+                \item \lipsum[1][1-2]
+            \end{itemize}
+        \end{minipage}}
+
+    \end{block}
+    
+
+
+    
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+    
+    \begin{block}{Method}
+
+    \lipsum[1][1-3]
+    \begin{figure}
+        \begin{minipage}[c]{0.83\textwidth}
+        \includegraphics[width=\textwidth]{example-image-duck}
+        \end{minipage}\hfill
+        \begin{minipage}[c]{0.17\textwidth}
+        \caption{\lipsum[1][1-4]}
+        \label{fig:03-03}
+        \end{minipage}
+    \end{figure}
+    % \begin{wrapfigure}[26]{l}{0.7\textwidth}  
+    %     %\setlength{\columnsep}{10em}
+        
+    %         %\setlength{\wrapoverhang}{-3em} % Add negative space to the left
+    %         %\centering
+    %         \includegraphics[width=0.7\textwidth]{Endeavour poster/NN.png}
+    %         \caption{\textbf{Top: }First layer is convolutional with max pooling + linear activation, second layer is fixed weights + sigmoid activation and third layer is FC + ReLU. \textbf{Bottom: }First layer is FC + linear activation, second layer is fixed weights + sigmoid activation and third layer is FC + ReLU}
+    %         \label{fig:your-label}
+    %     \end{wrapfigure}
+    %     \par
+    \lipsum[1][1]
+    \begin{itemize}
+        \item main point 1
+        \begin{itemize}
+            \item sub point 1
+            \item sub point 2
+        \end{itemize}
+        \item main point 2
+        \item main point 3
+    \end{itemize}
+     \lipsum[1][1-5]
+    \end{block}
+    \begin{block}{Results}
+    \begin{figure}
+        \begin{minipage}[c]{0.83\textwidth}
+        \includegraphics[width=\textwidth]{example-image-duck}
+        \end{minipage}\hfill
+        \begin{minipage}[c]{0.17\textwidth}
+        \caption{
+       \lipsum[1][1-3] }
+       \label{fig:03-03}
+        \end{minipage}
+    \end{figure}
+    \lipsum[1][1-4]
+
+
+
+    \end{block}
+
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{Results (continued)}
+     
+    
+    % \setlength{\columnsep}{1.5cm} % Adjust column separation
+    % \begin{wrapfigure}[10]{r}[10pt]{0.52\textwidth}  
+    %     %\setlength{\columnsep}{10em}
+        
+    %     %\setlength{\wrapoverhang}{-1em} % Add negative space to the left
+    %     \hfill
+    %     \includegraphics[width=0.45\textwidth]{Endeavour poster/Reconstruction comparison.png}
+    %     \caption{Snippet of electrode pattern, neural activation pattern and reconstruction}
+    %     \label{fig:your-label}
+    % \end{wrapfigure}
+    % \begin{wrapfigure}[10]{l}[10pt]{0.52\textwidth}  
+    %     %\setlength{\columnsep}{10em}
+        
+    %     %\setlength{\wrapoverhang}{-1em} % Add negative space to the left
+    %     \hfill
+    %     \includegraphics[width=0.45\textwidth]{Endeavour poster/RF.png}
+    %     \caption{Snippet of electrode pattern, neural activation pattern and reconstruction}
+    %     \label{fig:your-label}
+    % \end{wrapfigure}
+    \begin{figure}
+        \begin{minipage}[c]{0.5\textwidth}
+            % This section shows snippets of model output and intermediate layer expression. 1 of 10000 validation images were shown as an example.\\~\\~\\~\\
+            \includegraphics[width=\textwidth]{example-image-duck}
+            \includegraphics[width=\textwidth]{example-image-duck}
+            
+            \caption{\lipsum[1][1-3]}
+            
+            \colorbox[RGB]{255, 245,242}{%
+            \begin{minipage}{460pt}
+
+            \begin{itemize}
+                \item \lipsum[1][1-2]
+                \item \lipsum[1][1-2]
+            \end{itemize}
+            \end{minipage}}
+
+        \end{minipage}\hfill
+        \begin{minipage}[c]{0.5\textwidth}
+            \includegraphics[width=\textwidth]{example-image-duck}
+            \caption{\lipsum[1][1-4]}
+            \includegraphics[width=\textwidth]{example-image-duck}
+            \caption{\lipsum[1][1-4]}
+        \end{minipage}
+    \end{figure}
+    
+    \lipsum[1][1]
+    \begin{itemize}
+        \item \lipsum[1][1-3]
+        \item \lipsum[1][1-3]
+    \end{itemize}
+    
+    
+
+  \end{block}
+  \begin{exampleblock}{Discussion and Future Work}
+  \begin{itemize}
+      \item \lipsum[1][1]
+      \item \lipsum[1][1]
+      
+      \item \textbf{Next step:} 
+      \begin{itemize}
+          \item \lipsum[1][1-2]
+          \item \lipsum[1][1-2]
+      \end{itemize}
+  \end{itemize}
+  \end{exampleblock}
+    
+
+
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\end{document}
